@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<HTML lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport">
+
+  <title>AssetInver</title>
+<style>
+  body {
+   font-family: Aptos;
+   background: #f4f4f9;
+   text-align: center;
+   padding: 0px;
+  }
+.contenido {
+background: #E6E6E6;
+width: 100%;
+max-width: 1500px;
+margin: 40px auto;
+padding: 20px;
+border-radius: 15px;
+box-shadows: 0 0 10px rgba(0,0,0,0.3);
+}
+.barnav {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 20px 0;
+font-family: Aptos;
+background: seagreen;
+}
+h2 {
+color: white;
+}
+.menu {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 20px 0;
+font-family: Aptos;
+}
+.menu a {
+text-decoration: none;
+color: black;
+padding: 15px 15px;
+border-radius: 4px;
+transition: 0.3s;
+}
+.menu a:hover {
+background: seagreen;
+}
+.menu .activo{
+background: seagreen;
+color: white;
+}
+  h1 {
+   color: seagreen;
+  }
+  p {
+   color: seagreen;
+font-size: 20px;
+  }  }
+hr {
+border: none;
+height: 3px;
+background: seagreen;
+margin: 20px 0;
+}
+.menu button {
+   background: seagreen;
+   color: White;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  .menu button: hover {
+   background: #45a049;
+  }
+.bloque-lado {
+display:flex;
+aling-items: center;
+justify-content: center;
+gap: 20px;
+background: rgba(255,255,255,0.1);
+padding: 20px;
+border-radius: 10px;
+margin: 20px 0;
+}
+.bloque-lado .form,
+.bloque-lado img {
+width:50%
+}
+.bloque-lado .imagen img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+}
+.bloque-lado h2 {
+color: seagreen;
+}
+
+.bloque-foto img {
+width: 100%;
+border-radius: 10px;
+display: block;
+}
+.bloque-foto button {
+   background: seagreen;
+   color: White;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  .bloque-foto button: hover {
+   background: #45a049;
+  }
+
+ </style>
+</head>
+<body>
+<div class="contenido">
+<nav class="barnav">
+<h2> ✔ Asesoramiento profesional</h2>
+<h2> ✔ Selección exclusiva</h2>
+<h2> ✔ Oportunidades únicas</h2>
+</nav>
+  <img src="80bc21fb-5d40-4bee-a150-09161e148b07.png" alt="mi foto" width="200">
+<nav class="menu">
+<a href="index1.html"> INICIO</a>
+<a href="servicios.html"> SERVICIOS</a>
+<a href="sobrenosotros.html"> SOBRE NOSOTROS</a>
+<a href="contacto.html" class="activo"> CONTACTO</a>
+<button onclick="alert('Llámanos al 953826223');"/> LLÁMANOS</button>
+</nav>
+<div class="bloque-lado">
+<form
+action="https://formsubmit.co/assetinver@gmail.com" method="POST">
+<label>Nombre:</label><br>
+<input type="text" name="nombre"required><br><br>
+<label>Correo:</label><br>
+<input type="email" name="correo" required><br><br>
+<label>Mensaje:></label><br>
+<textarea name="mensaje" rows="4" required></textarea><br><br>
+<button type="submit">Enviar</button>
+</form>
+<div class="bloque-foto">
+<img src="Captura de pantalla 2025-10-06 120047.png" alt="localización" style="width: 250px;">
+<br>
+<button onclick="window.open('https://www.google.es/maps/place/C.+Villatorres,+22,+23009+Ja%C3%A9n/@37.7986856,-3.7835847,18z/data=!3m1!4b1!4m6!3m5!1s0xd6dd657b2b3badf:0x3937e5bd5fa0cd0a!8m2!3d37.7986835!4d-3.7822972!16s%2Fg%2F11fx772mt9!5m2!1e4!1e2?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D','_blank');"/>Visita nuestra oficina</button>
+<br>
+<br>
+<button onclick="alert('Llámanos al 953826223');"/> Teléfono</button>
+<br>
+<br>
+<button onclick="alert('assetinver@gmail.com');"/> Correo electrónico</button>
+</div>
+</div>
+
+</div>
+</body>
+</html>

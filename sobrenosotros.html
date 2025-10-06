@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<HTML lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport">
+
+  <title>AssetInver</title>
+<style>
+  body {
+   font-family: Aptos;
+   background: #f4f4f9;
+   text-align: center;
+   padding: 0px;
+  }
+.contenido {
+background: #E6E6E6;
+width: 100%;
+max-width: 1500px;
+margin: 40px auto;
+padding: 20px;
+border-radius: 15px;
+box-shadows: 0 0 10px rgba(0,0,0,0.3);
+}
+.barnav {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 20px 0;
+font-family: Aptos;
+background: seagreen;
+}
+h2 {
+color: white;
+}
+.menu {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 20px 0;
+font-family: Aptos;
+}
+.menu a {
+text-decoration: none;
+color: black;
+padding: 15px 15px;
+border-radius: 4px;
+transition: 0.3s;
+}
+.menu a:hover {
+background: seagreen;
+}
+.menu .botton-borde {
+border: 2px solid seagreen;
+color: seagreen;
+}
+.menu .botton-borde:hover {
+background: seagreen;
+color: white;
+}
+.menu .activo{
+background: seagreen;
+color: white;
+}
+  h1 {
+   color: seagreen;
+  }
+  p {
+   color: seagreen;
+font-size: 20px;
+  }
+  button {
+   background: seagreen;
+   color: White;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  button: hover {
+   background: #45a049;
+  }
+hr {
+border: none;
+height: 3px;
+background: seagreen;
+margin: 20px 0;
+}
+.bloque-lado {
+display:flex;
+aling-items: center;
+justify-content: center;
+gap: 20px;
+background: rgba(255,255,255,0.1);
+padding: 20px;
+border-radius: 10px;
+margin: 20px 0;
+}
+.bloque-lado .texto,
+.bloque-lado img {
+width:50%
+}
+.bloque-lado .texto {
+text-align: left;
+color: white;
+padding: 10px;
+}
+.bloque-lado .imagen img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+}
+.bloque-lado h2 {
+color: seagreen;
+}
+.bloque-lado1 {
+flex-direction: row-reverse;
+display:flex;
+aling-items: center;
+justify-content: center;
+gap: 20px;
+background: rgba(255,255,255,0.1);
+padding: 20px;
+border-radius: 10px;
+margin: 20px 0;
+}
+.bloque-lado1 .texto,
+.bloque-lado1 img {
+width:50%
+}
+.bloque-lado1 .texto {
+text-align: left;
+color: white;
+padding: 10px;
+}
+.bloque-lado1 .imagen img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+}
+.bloque-lado1 h2 {
+color: seagreen;
+}
+.bloque-lado2 {
+display:flex;
+aling-items: center;
+justify-content: center;
+gap: 20px;
+background: rgba(255,255,255,0.1);
+padding: 20px;
+border-radius: 10px;
+margin: 20px 0;
+}
+.bloque-lado2 .texto,
+.bloque-lado2 img {
+width:50%
+}
+.bloque-lado2 .texto {
+text-align: left;
+color: white;
+padding: 10px;
+}
+.bloque-lado2 .imagen img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+}
+.bloque-lado2 h2 {
+color: seagreen;
+}
+.bloque-lado3 {
+flex-direction:row-reverse;
+display:flex;
+aling-items: center;
+justify-content: center;
+gap: 20px;
+background: rgba(255,255,255,0.1);
+padding: 20px;
+border-radius: 10px;
+margin: 20px 0;
+}
+.bloque-lado3 .texto,
+.bloque-lado3 img {
+width:50%
+}
+.bloque-lado3 .texto {
+text-align: left;
+color: white;
+padding: 10px;
+}
+.bloque-lado3 .imagen img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+}
+.bloque-lado3 h2 {
+color: seagreen;
+}
+.bloque-lado3 button {
+   background: seagreen;
+   color: White;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  .bloque-lado3 button: hover {
+   background: #45a049;
+  }
+.bloque-lado3 a {
+text-decoration: none;
+color: white;
+padding: 8px 15 px;
+border-radius: 4px;
+transition: 0.3s;
+}
+.menu button {
+   background: seagreen;
+   color: White;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+  }
+  .menu button: hover {
+   background: #45a049;
+  }
+ </style>
+</head>
+<body>
+<div class="contenido">
+<nav class="barnav">
+<h2> ✔ Asesoramiento profesional</h2>
+<h2> ✔ Selección exclusiva</h2>
+<h2> ✔ Oportunidades únicas</h2>
+</nav>
+  <img src="80bc21fb-5d40-4bee-a150-09161e148b07.png" alt="mi foto" width="200">
+<nav class="menu">
+<a href="index1.html"> INICIO</a>
+<a href="servicios.html"> SERVICIOS</a>
+<a href="sobrenosotros.html" class="activo" > SOBRE NOSOTROS</a>
+<a href="contacto.html"> CONTACTO</a>
+<button onclick="alert('Llámanos al 953826223');"/> LLÁMANOS</button>
+</nav>
+<div class="bloque-lado">
+<div class="texto">
+<h2> ¿Quienes somos?</h2>
+<p> En AssetInver, somos más que una inmobiliaria en Jaén. Nos diferenciamos por nuestro trato cercano y personalizado, ofreciendo soluciones a medida para cada cliente. Nuestro 'toque especial' reside en la dedicación y el compromiso con cada propiedad, asegurando una experiencia única y satisfactoria.
+</p>
+</div>
+<img src="antasari.png" alt="imagen a la derecha" style="width: 400px;">
+</div>
+<hr>
+<div class="bloque-lado1">
+<div class="texto">
+<h2> Nuestra Historia</h2>
+<p> Cuando empezamos, solo contábamos con un par de conocidos que nos pedían ayuda para vender o alquilar sus propiedades. Al ver que se nos daba bien y nos gustaba, ampliamos el equipo. Hoy, somos una pequeña empresa con muchos más contactos y, gracias a nuestra especialización y reputación en Jaén, somos la primera opción para muchos al buscar ayuda para vender o alquilar.
+</p>
+</div>
+<img src="planificacion-reunion-evento-empresa.jpg" alt="imagen a la derecha" style="width: 400px;">
+</div>
+<hr>
+<div class="bloque-lado2">
+<div class="texto">
+<h2> Nuestros Clientes</h2>
+<p> En AssetInver, valoramos a cada cliente. Todo aquel que nos contacta recibe una atención profesional y personalizada. Nos adaptamos a las necesidades de cada persona para ofrecer el mejor servicio posible.
+</p>
+</div>
+<img src="pexels-thirdman-8469984-683x1024.jpg" alt="imagen a la derecha" style="width: 400px; height: 500px;">
+</div>
+<hr>
+<div class="bloque-lado3">
+<div class="texto">
+<h2> Nuestro Futuro</h2>
+<p> Aunque el futuro es incierto, en AssetInver aspiramos a estar entre las inmobiliarias mejor posicionadas de la provincia de Jaén. Para adaptarnos a los cambios del mercado, hemos incorporado una amplia gama de seguros a nuestros servicios de venta, alquiler y gestión documental, ofreciendo así un servicio más completo a nuestros clientes.
+</p>
+<button><a href="servicios.html">Nuestros servicios</button>
+</div>
+<img src="grafico.jpg" alt="imagen a la derecha" style="width: 400px; height: 500px;">
+</div>
+</div>
+</body>
+</html>
