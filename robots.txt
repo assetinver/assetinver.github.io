@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap:
+https://assetinver.github.io/sitemap.xml
