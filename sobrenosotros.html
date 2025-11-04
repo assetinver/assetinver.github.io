@@ -10,21 +10,29 @@
   <title>AssetInver Jaén</title>
   <link rel="icon" href="favicon.png" type="image/png">
 <style>
+  html, body{
+height: 100%;
+margin: 0;
+padding: 0;
+}
+html {
+background: linear-gradient(
+rgba(255, 255, 255, 0.7),
+rgba(255, 255, 255, 0.7)
+), 
+url("fotofondo.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment:fixed;
+}
   body {
    font-family: Aptos;
-   background: #f4f4f9;
+   background: transparent;
    text-align: center;
    padding: 0px;
   }
-.contenido {
-background: #E6E6E6;
-width: 100%;
-max-width: 1500px;
-margin: 40px auto;
-padding: 20px;
-border-radius: 15px;
-box-shadows: 0 0 10px rgba(0,0,0,0.3);
-}
+
 .barnav {
 display: flex;
 justify-content: center;
@@ -263,7 +271,7 @@ transition: 0.3s;
 </script>
 </head>
 <body>
-<div class="contenido">
+
 <nav class="barnav">
 <h2> ✔ Asesoramiento profesional</h2>
 <h2> ✔ Selección exclusiva</h2>
@@ -313,9 +321,10 @@ transition: 0.3s;
 </div>
 <img src="grafico.jpg" alt="imagen a la derecha" style="width: 400px; height: 500px;">
 </div>
-</div>
+
 </body>
 </html>
+
 
 
 
