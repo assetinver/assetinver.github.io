@@ -217,6 +217,18 @@ transition: opacity 0.6s ease;
 .slider img.active {
 display: block;
 }
+  .imagen-movil {
+float: right;
+width: 400px;
+height: auto;
+max-width: 400px;
+border-radius: 10px;
+animation: zoomLento 8s ease-in-out infinite alternate;
+}
+@keyframes zoomLento {
+0% { transform: scale(1); }
+100% { transform: scale(1.05); }
+}
  </style>
   <script type="application/ld+json">
 {
@@ -315,7 +327,7 @@ display: block;
 <p>Accede a nuestro catálogo completo de viviendas</p>
   <button onclick="window.open('https://www.idealista.com/pro/assetinver/venta-viviendas','_blank');"/>Catálogo</button>
 </div>
-<img src="Jaen.jpg" alt="imagen a la derecha" style="width: 400px;">
+<img src="Jaen.jpg" alt="imagen a la derecha" class="imagen-movil">
 </div>
 <div class="bloque-final">
 <h2> Sobre nosotros</h2>
@@ -340,6 +352,7 @@ document.querySelectorAll('.slider').forEach(slider => {
 </body>
 
 </html>
+
 
 
 
