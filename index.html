@@ -229,25 +229,35 @@ animation: zoomLento 8s ease-in-out infinite alternate;
 0% { transform: scale(1); }
 100% { transform: scale(1.05); }
 }
-  .modal {
+footer a {
+  color: seagreen;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: darkgreen;
+}
+
+.modal {
   display: none;
   position: fixed;
   z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
 }
 
 .modal-contenido {
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 16px;
   margin: 10% auto;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
   width: 90%;
   max-width: 600px;
-  border-top: 6px solid seagreen;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   animation: aparecer 0.3s ease;
 }
 
@@ -266,6 +276,11 @@ animation: zoomLento 8s ease-in-out infinite alternate;
 @keyframes aparecer {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+.modal h2 {
+  color: seagreen;
+  margin-bottom: 10px;
 }
  </style>
   <script type="application/ld+json">
@@ -387,7 +402,7 @@ document.querySelectorAll('.slider').forEach(slider => {
   }, 3000);
 });
 </script>
-  <footer style="text-align:center; margin-top:50px; font-size:14px;">
+<footer style="text-align:center; margin-top:50px; font-size:14px;">
   <a href="#" onclick="abrirModal('aviso')">Aviso legal</a> |
   <a href="#" onclick="abrirModal('privacidad')">Política de privacidad</a> |
   <a href="#" onclick="abrirModal('cookies')">Política de cookies</a>
@@ -406,6 +421,7 @@ document.querySelectorAll('.slider').forEach(slider => {
     </ul>
   </div>
 </div>
+
 <div id="modal-privacidad" class="modal">
   <div class="modal-contenido">
     <span class="cerrar" onclick="cerrarModal('privacidad')">&times;</span>
@@ -415,6 +431,7 @@ document.querySelectorAll('.slider').forEach(slider => {
     <p>AssetInver aplica las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos.</p>
   </div>
 </div>
+
 <div id="modal-cookies" class="modal">
   <div class="modal-contenido">
     <span class="cerrar" onclick="cerrarModal('cookies')">&times;</span>
@@ -423,6 +440,7 @@ document.querySelectorAll('.slider').forEach(slider => {
     <p>No se utilizan cookies analíticas ni de publicidad. Puede configurar su navegador para bloquearlas en cualquier momento.</p>
   </div>
 </div>
+
 <script>
 function abrirModal(tipo) {
   document.getElementById('modal-' + tipo).style.display = 'block';
@@ -432,18 +450,16 @@ function cerrarModal(tipo) {
   document.getElementById('modal-' + tipo).style.display = 'none';
 }
 
-// Cerrar al hacer clic fuera del cuadro
 window.onclick = function(event) {
   document.querySelectorAll('.modal').forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+    if (event.target === modal) modal.style.display = "none";
+  });
 }
 </script>
 </body>
 
 </html>
+
 
 
 
