@@ -282,6 +282,48 @@ footer a:hover {
   color: seagreen;
   margin-bottom: 10px;
 }
+  .aviso-cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 2px solid seagreen;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  display: none;
+  z-index: 99999;
+}
+
+.aviso-cookies button {
+  background-color: seagreen;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.aviso-cookies button:hover {
+  background-color: darkgreen;
+}
+
+.aviso-cookies a {
+  color: seagreen;
+  text-decoration: none;
+}
+
+.aviso-cookies a:hover {
+  text-decoration: underline;
+}
+
  </style>
   <script type="application/ld+json">
 {
@@ -456,9 +498,29 @@ window.onclick = function(event) {
   });
 }
 </script>
+  <div id="aviso-cookies" class="aviso-cookies">
+  <p>Este sitio web utiliza únicamente cookies técnicas necesarias para su correcto funcionamiento. 
+  <a href="#" onclick="abrirModal('cookies')">Más información</a>.</p>
+  <button id="aceptar-cookies">Aceptar</button>
+</div>
+<script>
+  // Mostrar aviso si no se ha aceptado antes
+  document.addEventListener("DOMContentLoaded", function() {
+    if (!localStorage.getItem("cookies-aceptadas")) {
+      document.getElementById("aviso-cookies").style.display = "block";
+    }
+  });
+
+  // Guardar aceptación y ocultar aviso
+  document.getElementById("aceptar-cookies").addEventListener("click", function() {
+    localStorage.setItem("cookies-aceptadas", "true");
+    document.getElementById("aviso-cookies").style.display = "none";
+  });
+</script>
 </body>
 
 </html>
+
 
 
 
