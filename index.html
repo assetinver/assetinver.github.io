@@ -229,6 +229,44 @@ animation: zoomLento 8s ease-in-out infinite alternate;
 0% { transform: scale(1); }
 100% { transform: scale(1.05); }
 }
+  .modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  border-top: 6px solid seagreen;
+  animation: aparecer 0.3s ease;
+}
+
+.cerrar {
+  color: seagreen;
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: darkgreen;
+}
+
+@keyframes aparecer {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
  </style>
   <script type="application/ld+json">
 {
@@ -349,9 +387,64 @@ document.querySelectorAll('.slider').forEach(slider => {
   }, 3000);
 });
 </script>
+  <footer style="text-align:center; margin-top:50px; font-size:14px;">
+  <a href="#" onclick="abrirModal('aviso')">Aviso legal</a> |
+  <a href="#" onclick="abrirModal('privacidad')">Política de privacidad</a> |
+  <a href="#" onclick="abrirModal('cookies')">Política de cookies</a>
+</footer>
+<div id="modal-aviso" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('aviso')">&times;</span>
+    <h2>Aviso Legal</h2>
+    <p>El presente aviso legal regula el uso del sitio web <strong>https://assetinver.github.io</strong>, cuyo titular es <strong>Gestión e Inversiones de Inmuebles y Activos del Sur SL</strong>.</p>
+    <p>En cumplimiento de la Ley 34/2002 (LSSI-CE), se facilitan los siguientes datos:</p>
+    <ul>
+      <li><strong>Titular:</strong> Gestión e Inversiones de Inmuebles y Activos del Sur SL</li>
+      <li><strong>Actividad:</strong> Asesoramiento e intermediación inmobiliaria</li>
+      <li><strong>Ubicación:</strong> Jaén, España</li>
+      <li><strong>Correo electrónico:</strong> administracion@assetinver.com</li>
+    </ul>
+  </div>
+</div>
+<div id="modal-privacidad" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('privacidad')">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>De acuerdo con el RGPD y la LOPDGDD, los datos recogidos mediante el formulario de contacto serán tratados por <strong>AssetInver</strong> con la finalidad de responder a consultas.</p>
+    <p>Los usuarios podrán ejercer sus derechos escribiendo a <strong>administracion@assetinver.com</strong>.</p>
+    <p>AssetInver aplica las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos.</p>
+  </div>
+</div>
+<div id="modal-cookies" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal('cookies')">&times;</span>
+    <h2>Política de Cookies</h2>
+    <p>Este sitio web utiliza únicamente cookies técnicas necesarias para su correcto funcionamiento.</p>
+    <p>No se utilizan cookies analíticas ni de publicidad. Puede configurar su navegador para bloquearlas en cualquier momento.</p>
+  </div>
+</div>
+<script>
+function abrirModal(tipo) {
+  document.getElementById('modal-' + tipo).style.display = 'block';
+}
+
+function cerrarModal(tipo) {
+  document.getElementById('modal-' + tipo).style.display = 'none';
+}
+
+// Cerrar al hacer clic fuera del cuadro
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+</script>
 </body>
 
 </html>
+
 
 
 
