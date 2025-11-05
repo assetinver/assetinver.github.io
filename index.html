@@ -2,15 +2,16 @@
 <HTML lang="es">
 <head>
   <meta charset="UTF-8">
-    <meta name="description" content="AssetInver Jaén - Empresa inmobiliaria especializada en inversiones, asesoramiento documental y gestión patrimonial.>
+   <meta name="description" content="AssetInver Jaén - Empresa inmobiliaria especializada en inversiones, asesoramiento documental y gestión patrimonial.>
     <meta name="keywords" content="AssetInver, Jaén, inmobiliaria, inversiones, asesoramiento, gestión patrimonial">
   <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="TRUz1kyWzcaRJZKfi-s7MI8m0orUpaUzs70U5K4IRv4" />
+  <meta name="google-site-verification" content="TRUz1kyWzcaRJZKfi-s7MI8m0orUpaUzs70U5K4IRv4" />
   <meta name="msvalidate.01" content="B7CB3D222C41425E4EFB73E8283111E4" />
-   <title>AssetInver Jaén</title>
-  <link rel="icon" href="favicon.png" type="image/png">
+
+  <title>AssetInver Jaén</title>
+<link rel="icon" href="favicon.png" type="image/png">
 <style>
-  html, body{
+html, body{
 height: 100%;
 margin: 0;
 padding: 0;
@@ -32,7 +33,6 @@ background-attachment:fixed;
    text-align: center;
    padding: 0px;
   }
-
 .barnav {
 display: flex;
 justify-content: center;
@@ -98,9 +98,9 @@ background: seagreen;
 margin: 20px 0;
 }
 table {
-margin: 50px auto;
+margin: 60px auto;
 border-collapse: collapse;
-  align-items: center;
+align-items: left;
 }
 td {
 border: 2px solid seagreen;
@@ -196,11 +196,11 @@ color: seagreen;
   .menu button: hover {
    background: #45a049;
   }
-  h23 {
+h23 {
 color: seagreen;
 font-size: 35px;
 }
-  .slider {
+.slider {
 position: relative;
 width:220px;
 height:250px;
@@ -217,7 +217,7 @@ transition: opacity 0.6s ease;
 .slider img.active {
 display: block;
 }
-  .imagen-movil {
+.imagen-movil {
 float: right;
 width: 400px;
 height: auto;
@@ -282,7 +282,7 @@ footer a:hover {
   color: seagreen;
   margin-bottom: 10px;
 }
-  .aviso-cookies {
+.aviso-cookies {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -323,9 +323,72 @@ footer a:hover {
 .aviso-cookies a:hover {
   text-decoration: underline;
 }
+.footer-assetinver {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 18px 12px;
+  font-size: 16px;
+  color: #333;
+  border-top: 1px solid rgba(46,139,87,0.4);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 10000;
+}
 
- </style>
-  <script type="application/ld+json">
+.footer-assetinver a {
+  color: seagreen;
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color 0.3s;
+}
+
+.footer-assetinver a:hover {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+.footer-assetinver .firma {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  .footer-assetinver {
+    font-size: 15px;
+    padding: 16px 10px;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1 0 auto;
+}
+.footer-assetinver {
+  position: relative;
+  text-align: center;
+  padding: 18px 12px;
+  font-size: 17px;
+  color: #333;
+  border-top: 1px solid rgba(46,139,87,0.4);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+body > img {
+display: block;
+margin: 0 auto 10px auto
+}
+</style>
+<script type="application/ld+json">
 {
 "@context":"https://schema.org",
 "@type": "LocalBusiness",
@@ -343,7 +406,6 @@ footer a:hover {
 </script>
 </head>
 <body>
-
 <nav class="barnav">
 <h2> ✔ Asesoramiento profesional</h2>
 <h2> ✔ Selección exclusiva</h2>
@@ -357,6 +419,7 @@ footer a:hover {
 <a href="contacto.html"> CONTACTO</a>
 <button onclick="alert('Llámanos al 953826223');"/> LLÁMANOS</button>
 </nav>
+<main class="page-content">
   <h1>Bienvenido a AssetInver</h1>
 <h3>Somos tu mejor opción para invertir en inmuebles en Jaén. Descubre nuestra selección exclusiva de propiedades y haz realidad tus sueños.</h3>
 <hr>
@@ -375,7 +438,7 @@ footer a:hover {
 <td style:="text-align: center; vertical-align: top;">
 <div class="slider">
 <img src="doctorluzon.jpg" class="active"">
-<img src="luzon2.jpg">
+<img src="luzon2.jpg"> 
 <img src="luzon3.jpg">
 <img src="luzon4.jpg">
 </div>
@@ -422,12 +485,13 @@ footer a:hover {
 <p>Accede a nuestro catálogo completo de viviendas</p>
   <button onclick="window.open('https://www.idealista.com/pro/assetinver/venta-viviendas','_blank');"/>Catálogo</button>
 </div>
-<img src="Jaen.jpg" alt="imagen a la derecha" class="imagen-movil">
+<img src="jaen.jpg" alt="imagen a la derecha" class="imagen-movil">
 </div>
 <div class="bloque-final">
 <h2> Sobre nosotros</h2>
-<text> AssetInver es una empresa dedicada a la venta de inmuebles en Jaen, <br> especializada en ofrecer a nuestros clientes las mejores oportunidades <br> de inversión. Contamos con un equipo de expertos en el mercado <br> inmobiliario que te guiarán en todo el proceso.</text>
+<text> AssetInver es una empresa dedicada a la venta de inmuebles en Jaén, <br> especializada en ofrecer a nuestros clientes las mejores oportunidades <br> de inversión. Contamos con un equipo de expertos en el mercado <br> inmobiliario que te guiarán en todo el proceso.</text>
 </div>
+</main>
 <script>
 document.querySelectorAll('.slider').forEach(slider => {
   const images = slider.querySelectorAll('img');
@@ -444,10 +508,16 @@ document.querySelectorAll('.slider').forEach(slider => {
   }, 3000);
 });
 </script>
-<footer style="text-align:center; margin-top:50px; font-size:14px;">
-  <a href="#" onclick="abrirModal('aviso')">Aviso legal</a> |
-  <a href="#" onclick="abrirModal('privacidad')">Política de privacidad</a> |
-  <a href="#" onclick="abrirModal('cookies')">Política de cookies</a>
+<footer class="footer-assetinver">
+  <div class="enlaces-legales">
+    <a href="#" onclick="event.preventDefault(); abrirModal('aviso')">Aviso legal</a> |
+    <a href="#" onclick="event.preventDefault(); abrirModal('privacidad')">Política de privacidad</a> |
+    <a href="#" onclick="event.preventDefault(); abrirModal('cookies')">Política de cookies</a>
+  </div>
+
+  <div class="firma">
+    <span>© <span id="year"></span> AssetInver · Diseño y desarrollo web realizado por <strong>AssetInver</strong></span>
+  </div>
 </footer>
 <div id="modal-aviso" class="modal">
   <div class="modal-contenido">
@@ -482,6 +552,11 @@ document.querySelectorAll('.slider').forEach(slider => {
     <p>No se utilizan cookies analíticas ni de publicidad. Puede configurar su navegador para bloquearlas en cualquier momento.</p>
   </div>
 </div>
+<div id="aviso-cookies" class="aviso-cookies">
+  <p>Este sitio web utiliza únicamente cookies técnicas necesarias para su correcto funcionamiento. 
+  <a href="#" onclick="abrirModal('cookies')">Más información</a>.</p>
+  <button id="aceptar-cookies">Aceptar</button>
+</div>
 
 <script>
 function abrirModal(tipo) {
@@ -498,11 +573,6 @@ window.onclick = function(event) {
   });
 }
 </script>
-  <div id="aviso-cookies" class="aviso-cookies">
-  <p>Este sitio web utiliza únicamente cookies técnicas necesarias para su correcto funcionamiento. 
-  <a href="#" onclick="abrirModal('cookies')">Más información</a>.</p>
-  <button id="aceptar-cookies">Aceptar</button>
-</div>
 <script>
   // Mostrar aviso si no se ha aceptado antes
   document.addEventListener("DOMContentLoaded", function() {
@@ -517,9 +587,62 @@ window.onclick = function(event) {
     document.getElementById("aviso-cookies").style.display = "none";
   });
 </script>
-</body>
+<script>
+// Año automático
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+function ajustarEspacioFooter() {
+  const footer = document.querySelector(".footer-assetinver");
+  if (footer) {
+    document.body.style.paddingBottom = footer.offsetHeight + "px";
+  }
+}
+window.addEventListener("load", () => {
+  ajustarEspacioFooter();
+  setTimeout(ajustarEspacioFooter, 500);  
+  setTimeout(ajustarEspacioFooter, 1500); 
+});
+window.addEventListener("resize", ajustarEspacioFooter);
+</script>
+<script>
+    document.querySelectorAll('.slider').forEach(slider => {
+      const images = slider.querySelectorAll('img');
+      let current = 0;
+      images[current].classList.add('active');
+      setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+      }, 3000);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
 
+    function abrirModal(tipo) {
+      document.getElementById('modal-' + tipo).style.display = 'block';
+    }
+    function cerrarModal(tipo) {
+      document.getElementById('modal-' + tipo).style.display = 'none';
+    }
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) modal.style.display = "none";
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (!localStorage.getItem("cookies-aceptadas")) {
+        document.getElementById("aviso-cookies").style.display = "block";
+      }
+    });
+    document.getElementById("aceptar-cookies").addEventListener("click", function() {
+      localStorage.setItem("cookies-aceptadas", "true");
+      document.getElementById("aviso-cookies").style.display = "none";
+    });
+  </script>
+</body>
 </html>
+
 
 
 
