@@ -387,6 +387,40 @@ body > img {
 display: block;
 margin: 0 auto 10px auto
 }
+#preloader { background: #ffffff; }
+#preloader svg { display:block; }
+.stroke {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  opacity: 0.95;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+}
+.shade { transition: opacity 0.6s ease; }
+.s1 { animation: draw 0.55s linear forwards; animation-delay: 0s; }
+.s2 { animation: draw 0.35s linear forwards; animation-delay: 0.48s; }
+.s3 { animation: draw 0.45s linear forwards; animation-delay: 0.82s; }
+.s4 { animation: draw 0.25s linear forwards; animation-delay: 1.20s; }
+.s5 { animation: draw 0.55s linear forwards; animation-delay: 1.40s; }
+.s6 { animation: draw 0.30s linear forwards; animation-delay: 1.98s; }
+.s7 { animation: draw 0.35s linear forwards; animation-delay: 2.28s; }
+.s8 { animation: draw 0.20s linear forwards; animation-delay: 0.68s; }
+.s9 { animation: draw 0.25s linear forwards; animation-delay: 0.20s; }
+.s10{ animation: draw 0.25s linear forwards; animation-delay: 2.10s; }
+.s11{ animation: draw 0.45s linear forwards; animation-delay: 2.55s; } 
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+#preloader.fade-out { opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke { animation: none; stroke-dashoffset: 0; }
+  #preloader { transition: none; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -406,6 +440,23 @@ margin: 0 auto 10px auto
 </script>
 </head>
 <body>
+<div id="preloader" aria-hidden="true" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#fff;">
+  <svg id="svg-pre" viewBox="0 0 800 520" width="70%" style="max-width:900px;height:auto;">
+    <path class="shade" d="M180 330 L220 290 L320 290 L360 330 L360 400 L180 400 Z" fill="#e6e6e6" opacity="0.6"/>
+    <path class="shade" d="M420 320 L460 280 L600 280 L640 320 L640 400 L420 400 Z" fill="#e6e6e6" opacity="0.35"/>
+    <path class="stroke s1" d="M200 330 L200 220 L300 160 L420 220 L420 330" stroke-linecap="round" stroke-linejoin="round" />
+    <path class="stroke s2" d="M230 330 L370 330" stroke-linecap="round" />
+    <path class="stroke s3" d="M260 330 L260 260 L340 260 L340 330" stroke-linecap="round" />
+    <path class="stroke s4" d="M320 200 L320 240" stroke-linecap="round" />
+    <path class="stroke s5" d="M450 330 L450 240 L550 200 L650 240 L650 330" stroke-linecap="round" />
+    <path class="stroke s6" d="M480 330 L620 330" stroke-linecap="round" />
+    <path class="stroke s7" d="M520 330 L520 270 L600 270 L600 330" stroke-linecap="round" />
+    <path class="stroke s8" d="M360 220 L420 220" stroke-linecap="round" />
+    <path class="stroke s9" d="M160 360 L200 330" stroke-linecap="round" />
+    <path class="stroke s10" d="M680 360 L640 330" stroke-linecap="round" />
+    <path class="stroke s11" d="M300 420 C340 400 420 400 460 420" stroke-linecap="round" />
+  </svg>
+</div>
 <nav class="barnav">
 <h2> ✔ Asesoramiento profesional</h2>
 <h2> ✔ Selección exclusiva</h2>
@@ -633,6 +684,23 @@ window.addEventListener("resize", ajustarEspacioFooter);
       document.getElementById("aviso-cookies").style.display = "none";
     });
   </script>
+<script>
+(function(){
+   const pre = document.getElementById('preloader');
+  document.body.style.overflow = 'hidden';
+
+  const TOTAL_MS = 3300;
+
+  setTimeout(() => {
+    pre.classList.add('fade-out');
+
+    setTimeout(() => {
+      document.body.style.overflow = '';
+      if (pre && pre.parentNode) pre.parentNode.removeChild(pre);
+    }, 700);
+  }, TOTAL_MS);
+})();
+</script>
 </body>
 </html>
 
