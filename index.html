@@ -465,7 +465,94 @@ margin: 0 auto 10px auto
   font-size: 17px;
   font-weight: bold;
 }
+/* ===== VENTANA PROMOCIÓN ===== */
 
+.promocion-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  background: rgba(0, 0, 0, 0.75);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.promocion-contenido {
+  position: relative;
+  max-width: 900px;
+  max-height: 90vh;
+  animation: aparecerPromocion 0.4s ease;
+}
+
+.promocion-contenido img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.cerrar-promocion {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: seagreen;
+  color: white;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 20001;
+  padding: 0;
+}
+
+.cerrar-promocion:hover {
+  background: darkgreen;
+}
+
+@keyframes aparecerPromocion {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* En móvil */
+@media (max-width: 600px) {
+  .promocion-overlay {
+    padding: 15px;
+  }
+
+  .promocion-contenido {
+    max-width: 95%;
+    max-height: 85vh;
+  }
+
+  .promocion-contenido img {
+    max-height: 85vh;
+  }
+
+  .cerrar-promocion {
+    top: -10px;
+    right: -10px;
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -531,7 +618,7 @@ margin: 0 auto 10px auto
 <img src="piscinaa.jpeg">
 <img src="pistaa.jpeg">
 </div>
-<p><a href="https://www.idealista.com/inmueble/112141792/" target="_blank"> Vivienda en Hospital (Jaén)<br> 320.000€</a></p>
+<p><a href="https://www.idealista.com/inmueble/112141792/" target="_blank"> Vivienda en el Hospital (Jaén)<br> 320.000€</a></p>
 </td>
 <td style:="text-align: center; vertical-align: top;">
 <div class="slider">
@@ -782,9 +869,41 @@ window.addEventListener("resize", ajustarEspacioFooter);
   }, TOTAL_MS);
 })();
 </script>
+<!-- VENTANA PROMOCIONAL -->
+
+<div id="promocion-overlay" class="promocion-overlay">
+
+  <div class="promocion-contenido">
+
+    <button class="cerrar-promocion" onclick="cerrarPromocion()">
+      ×
+    </button>
+
+    <img src="folleto promocion.png" alt="Promoción AssetInver">
+
+  </div>
+
+</div>
+<script>
+function abrirPromocion() {
+  document.getElementById("promocion-overlay").style.display = "flex";
+}
+
+function cerrarPromocion() {
+  document.getElementById("promocion-overlay").style.display = "none";
+}
+
+window.addEventListener("load", function() {
+
+  // Esperamos a que termine la animación de las casitas
+  setTimeout(function() {
+    abrirPromocion();
+  }, 3000);
+
+});
+</script>
 </body>
 </html>
-
 
 
 
